@@ -1,0 +1,21 @@
+{% extends 'cliente/menu.html.twig' %}
+
+{% block title %}Api peliculas{% endblock %}
+
+{% block body %}
+    </br>
+    <div class="container">
+        <div class="list-group">
+            {% for pelicula in peliculas %}
+                <a href="/pelicula/{{pelicula.id}}" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{pelicula.nombre}}</h5>
+                    <small>{{pelicula.id}}</small>
+                    </div>
+                    <p class="mb-1">{{pelicula.descripcion}}</p>
+                    <small>{{pelicula.genero}}</small>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

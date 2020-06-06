@@ -1,0 +1,24 @@
+{% extends 'cliente/menu.html.twig' %}
+
+{% block title %}{{pelicula.nombre}}{% endblock %}
+
+{% block body %}
+    </br>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                {{pelicula.id}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{pelicula.nombre}}</h5>
+                <p class="card-text">{{pelicula.descripcion}}</p>
+                <a href="/pelicula/modificar/{{pelicula.id}}" class="btn btn-primary">Modificar</a>
+                <a href="/pelicula/borrar/{{pelicula.id}}" class="btn btn-primary">Eliminar</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{pelicula.genero}}
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'cliente/menu.html.twig' %}
+
+{% block title %}Anyadir pelicula{% endblock %}
+
+{% block body %}
+    </br>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                {{ form_start(form) }}
+
+                    <h3>Añade una nueva pelicula </h3>
+                    {{ form_row(form.nombre) }}
+                    {{ form_row(form.genero) }}
+                    {{ form_row(form.descripcion) }}
+
+                    <input type="submit" class = "btn btn-primary" value="Guardar">
+                {{ form_end(form) }}
+
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </div>      
+{% endblock %}
